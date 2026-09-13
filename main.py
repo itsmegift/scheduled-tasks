@@ -6,13 +6,15 @@
 # See the solution video in the 100 Days of Python Course for explainations.
 # import os and use it to get the Github repository secrets
 
-email = os.environ.get("MY_EMAIL")
-password = os.environ.get("MY_PASSWORD")
 
+import os
 import smtplib
 import datetime as dt
 from random import choice
 import pandas
+
+email = os.environ.get("MY_EMAIL")
+password = os.environ.get("MY_PASSWORD")
 
 def send_email(message):
     with smtplib.SMTP("smtp.gmail.com") as connection:
